@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VerveIN - Book a Slot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i>
+      <span>Go Back</span>
+    </a>
+    <h1>Book a Slot with us </h1>
+    <div class="pricing-plans">
+      <div class="plan">
+        <h2>Per Session</h2>
+        <p class="price">₹3,500</p>
+        <p>Book individual sessions</p>
+      </div>
+      <div class="plan" data-plan="monthly">
+        <h2>Half Yearly Subscription</h2>
+        <p class="price">₹31,000</p>
+        <p>10 sessions in the duration</p>
+      </div>
+      <div class="plan" data-plan="yearly">
+        <h2>Yearly Subscription</h2>
+        <p class="price">₹61,000</p>
+        <p>20 sessions per year</p>
+      </div>
+    </div>
+    
+    <form id="booking-form">
+      <div class="form-group">
+        <label for="organization-name">Organization Name</label>
+        <input type="text" id="organization-name" name="organization-name" required>
+      </div>
+      <div class="form-group">
+        <label for="organization-email"> Email</label>
+        <input type="email" id="organization-email" name="organization-email" required>
+      </div>
+      <div class="form-group">
+        <label for="organization-contact"> Contact</label>
+        <input type="tel" id="organization-contact" name="organization-contact" required>
+      </div>
+      <div class="form-group">
+        <label for="slot-date">Slot Date</label>
+        <input type="date" id="slot-date" name="slot-date" required>
+      </div>
+      <div class="form-group">
+        <label for="slot-time">Slot Time</label>
+        <input type="time" id="slot-time" name="slot-time" required>
+      </div>
+      <div class="form-group">
+        <label for="topic">Topic/Subject</label>
+        <select id="topic" name="topic" required>
+          <option value="">Select Topic/Subject</option>
+          <option value="science">Science</option>
+          <option value="math">Mathematics</option>
+          <option value="history">History</option>
+          <option value="geography">Geography</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="payment-method">Payment Method</label>
+        <select id="payment-method" name="payment-method" required>
+          <option value="">Select Payment Method</option>
+          <option value="credit-card">Credit Card</option>
+          <option value="net-banking">Net Banking</option>
+          <option value="upi">UPI</option>
+        </select>
+      </div>
+      <button type="submit" class="btn">Book Slot</button>
+    </form>
+  </div>
+
+  <script>
+    const bookingForm = document.getElementById('booking-form');
+    const paymentMethodSelect = document.getElementById('payment-method');
+
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (paymentMethodSelect.value !== '') {
+        window.location.href = 'payment.html';
+      } else {
+        alert('Please select a payment method.');
+      }
+    });
+  </script>
+</body>
+</html>
