@@ -14,6 +14,8 @@ body {
   --main-color: black;
   --alt-color: white;
   --ascent-color: #8bc3ff;
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
 
   /* Typography */
   --main-heading: 60px;
@@ -31,13 +33,13 @@ a {
   text-decoration: none;
 }
 section {
-  width: 100%;
+  max-width: 100%;
   padding: 60px 0px;
   display: flex;
   justify-content: center;
 }
 div.container {
-  width: 80%;
+  max-width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,7 +105,7 @@ nav {
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius:15px;
-  margin-left:10%;
+
 }
 
 .nav-container {
@@ -149,7 +151,7 @@ nav {
   padding: 8px 15px;
   border-radius: 20px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .btn-login {
@@ -161,8 +163,19 @@ nav {
   color: #fff;
   background-color: #333;
 }
+.nav_close{
+  position: absolute;
+  right: 1.3rem;
+  bottom: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--first-color);
+}
+.nav_close:hover{
+  color: var(--first-color-alt);
+}
 
-
+/*            HERO SECTION                */
 .hero-section {
   width: 100%;
   padding: 60px 0px;
@@ -255,10 +268,7 @@ a.trans-btn {
 .next-btn {
   right: 10px;
 }
-/* About Us Section */
-/* #about-us{
-  background-color: #f0f0f0;
-} */
+
 .about-left,
 .about-right {
   width: 50%;
@@ -268,7 +278,6 @@ a.trans-btn {
   justify-content: center;
   gap: 20px;
 }
-
 .about-right h2 {
   font-size: var(--sub-heading);
   color: var(--ascent-color);
@@ -321,7 +330,7 @@ a.trans-btn {
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  gap: 2.5vh;
+  gap: 2vh;
   transition: all ease 0.5s;
 }
 
@@ -352,7 +361,7 @@ a.trans-btn {
 
 .portfolio-card .overlay h3 {
   color: #fbfbfb;
-  font-size: 24px;
+  font-size: 21px;
 }
 
 .portfolio-card .overlay p {
@@ -361,38 +370,8 @@ a.trans-btn {
   text-align: center;
 }
 
-.portfolio-card .overlay button {
-  height: 36px;
-  width: 108px;
-  background-color: #fec86a;
-  border: 1px solid #fec86a;
-  border-radius: 8px;
-  color: #34353b;
-  font-size: 12px;
-  transition: all ease 0.5s;
-  cursor: pointer;
-}
-
 .portfolio-card .overlay:hover {
   opacity: 1;
-}
-
-.portfolio button {
-  margin-top: 50px;
-  height: 48px;
-  width: 144px;
-  background-color: #fec86a;
-  border: 1px solid #fec86a;
-  border-radius: 8px;
-  color: #34353b;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all ease 0.5s;
-}
-
-.portfolio button:hover {
-  background-color: #cc9e4e;
 }
 
 /* Card section */
@@ -420,7 +399,7 @@ a.trans-btn {
 .card img {
   width: 100%;
   height: auto;
-  border-top-left-radius:: 10px;
+  border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
@@ -526,7 +505,7 @@ a.trans-btn {
 
 .faq-header {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 50%;
   margin-left:2%;
@@ -549,7 +528,6 @@ a.trans-btn {
     color: grey;
     margin-bottom: 1.5rem;
   }
-
   .faq-header p {
     font-size: 1.1rem;
     line-height: 1;
@@ -566,19 +544,16 @@ a.trans-btn {
   box-sizing: border-box;
   min-width: calc(50% - 20px);
 }
-/* .faq-question :hover{
-  background-color: #9e9c9c;
-  
-} */
 
 .question-toggle {
-  background-color:#BCAAA4;
-  padding: 20px;
+  background-color:#c5ddf6;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 14px;
 }
 
 .answer {
@@ -599,6 +574,7 @@ a.trans-btn {
 /* contact us */
 .contact-section {
   display: flex;
+  flex-wrap:wrap;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
@@ -609,6 +585,7 @@ a.trans-btn {
 .contact-info {
   flex: 1;
   padding-right: 40px;
+  margin-bottom:20px;
 }
 
 .contact-info h2 {
@@ -644,7 +621,7 @@ a.trans-btn {
 
 .detail i {
   font-size: 24px;
-  color: #262323;
+  color: #8bc3ff;
   margin-right: 20px;
 }
 
@@ -709,8 +686,9 @@ a.trans-btn {
 footer {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-color: #BCAAA4;
+  background-color: #dedede;
 }
 footer h3 {
   font-size: var(--sub-heading);
@@ -720,6 +698,14 @@ footer h3 {
 footer p {
   font-size: var(--paragraph);
   font-family: var(--main-font);
+}
+.row1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  gap: 40px;
 }
 footer .clm1 {
   width: 50%;
@@ -735,103 +721,247 @@ footer .clm2 {
   align-items: flex-end;
   gap: 20px;
 }
+  
+footer .container{
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+
+/*---------------------MEDIA QUERIES--------------------*/
+/*-----------------For small devices---------------*/
 
 
-
-@media screen and (max-width: 968px) {
-  .nav-menu {
-    width: 60%;
+@media screen and ( max-width: 768px){
+  .nav_menu{
+      position: fixed;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--body-color);
+      padding: 2rem 1.5rem 4rem;
+      box-shadow: 0 -1px 4px rgba(0,0,0, .15);
+      border-radius: 1.5rem 1.5rem 0 0;
+      transition: 1sec;
+  }
+  .hero-left h1 {
+    font-size: 28px;
+    line-height: 36px;
+}
+.hero-left p {
+  font-size: 14px;
+ }
+  section {
+    padding: 45px 0px;
+  }
+ .about-right h2 {
+    font-size: 11px;
+  }
+  .about-right h3 {
+    font-size: 24px;
+  }
+  .about-right p {
+    font-size: 10px;
+  }
+  .about-right span {
+    font-size: 8px;
+  }
+  a.button {
+    padding: 5px 13px;
+    font-size: 10px;
+  }
+  .about-left, .about-right {
+    gap: 8px;
+  }
+  .card-content {
+    padding: 15px;
+    font-size: 15px;
+}
+.card {
+  width: 70%;
+}
+  .picture {
+    margin-top: -75px;
+    margin-left: -466px;
+}
+  .picture iframe {
+    height: 222px;
+    width: 430px;
+}
+.portfolio {
+  padding: 30px 100px;
+}
+.portfolio h1 {
+  font-size: 43px;
+  font-weight: 550;
+}
+.portfolio-cards {
+    margin-top: 45px;
+}
+.flow-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.step-title {
+  font-size: 13px;
+}
+.step-icon {
+  font-size: 39px;
+  margin-bottom: 15px;
+}
+.faq-header {
+  display: flex;
+  flex-wrap:nowrap;
+  margin-left: 18px;
+}
+.question-toggle {
+  padding: 8px;
+  font-size: 7px;
+}
+.faq-header p {
+  font-size: 0.6rem;
+  line-height: 1;
+}
+.faq-container h3 {
+  margin-left: 18px;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+.faq-header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+.faq-header h2 {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.contact-section{
+  padding:30px;
+}
+/* .contact-info {
+  padding-right: 0;
+} */
+.contact-form {
+  padding: 20px;
+}
+.contact-form input,
+.contact-form textarea {
+  font-size: 11px;
+}
+.contact-form button {
+  font-size: 14px;
+  padding: 12px;
+}
+.contact-info h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.contact-info p {
+  font-size: 10.5px;
+  margin-bottom: 25px;
+}
+.contact-info h3 {
+  font-size: 23px;
+  font-weight: 550;
+}
+.contact-form textarea {
+  height: 85px;
+}
+.detail p {
+  font-size: 13px;
+}
+.detail h4 {
+  font-size: 15px;
+}
+footer .container{
+  margin-left:30px;
+}
+footer p {
+  font-size: 11px;
+}
+a {
+  font-size: 11px;
   }
 }
 
-@media screen and (max-width: 458px) {
-    section {
-        padding: 30px 0px;
-      }
-  div.container {
-    width: 90%;
-  }
-  div.row{
-    gap: 30px;
-  }
-  nav.menu {
-    display: none;
-  }
-  .mobile-menu {
-    position: absolute;
-    width: 100%;
-    background-color: var(--ascent-color);
-    color: var(--heading-color);
-    display: none;
-    flex-direction: column;
-    gap: 50px;
-    height: 100%;
-    top: 0;
-    left: 0;
-    justify-content: center;
-  }
-  .close-menu {
-    display: none;
-    font-size: 1.5rem;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    color: var(--heading-color);
-  }
-  .menu-toggle {
-    display: block;
-    font-size: 1.5rem;
-    color: var(--heading-color);
-  }
-  .nav-menu {
-    width: 30%;
-  }
-  .hero-section {
-    padding: 30px 0px;
-  }
-  .hero-section .row {
-    flex-direction: column;
-    gap: 40px;
-  }
-  .hero-left,
-  .hero-right {
-    width: 100%;
-  }
-  .about-us .row {
-    flex-direction: column;
-  }
-  .about-left,
-  .about-right {
-    width: 100%;
-  }
-  .our-services .row {
-    flex-direction: column;
-  }
-  .services-left,
-  .services-right {
-    width: 100%;
-  }
-  :root {
-    --main-heading: 50px;
-    --sub-heading: 16px;
-    --secondary-heading: 35px;
-    --paragraph: 14px;
-  }
-  footer .row {
-    flex-direction: column;
-    padding: 30px 0px;
-  }
-  footer .clm1,
-  footer .clm2,
-  footer .clm3,
-  footer .clm4,
-  footer .clm5,
-  footer .clm6 {
-    width: 100%;
-    align-items: flex-start;
-    gap: 20px;
-  }
+
+@media screen and ( max-width: 1290px){
+div.row{
+  flex-wrap:wrap;
+}
+.about-left, .about-right,.hero-left, .hero-right{
+  width:100%;
+}
+.img{
+  height:80vh;
+}
 }
 
+@media (min-width:768px) and (max-width:1140px){
+  .faq-header p {
+    font-size: 0.65rem;
+    line-height: 1;
+  }
+}
+@media (min-width:768px) and (max-width: 930px){
+  .portfolio-card .overlay h3 {
+    font-size: 16.5px;
+}
+.portfolio-card .overlay p {
+  font-size: 13px;
+}
+}
+@media screen and (max-width: 700px) {
+  .picture iframe {
+   visibility: hidden;
+}
+.home {
+  height: 80vh;}
+}
+@media screen and (max-width: 570px) {
+  .contact-info h3 {
+    font-size: 18px;
+}
+.faq-header {
+  display: flex;
+  flex-wrap: wrap;
+}
+.faq-header h2 {
+  margin-bottom: 0.5rem;
+}
+.portfolio-card .overlay h3 {
+  font-size: 5px;
+}
+.portfolio-card .overlay p {
+  font-size: 5px;
+}
+}
+
+@media screen and (max-width: 470px) {
+  footer .container{
+    margin-left:18px;
+  }
+  footer p {
+    font-size: 7px;
+  }
+  a {
+    font-size: 7px;
+  }
+  .contact-form textarea {
+    height: 70px;
+  }
+  .portfolio-cards {
+    margin-top: 31px;
+    gap:0.75vh;
+}
+.question-toggle {
+  padding: 7px;
+  font-size: 6px;
+}
+.portfolio h1 {
+  font-size: 26px;
+}
+}
