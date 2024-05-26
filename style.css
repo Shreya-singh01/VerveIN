@@ -163,17 +163,7 @@ nav {
   color: #fff;
   background-color: #333;
 }
-.nav_close{
-  position: absolute;
-  right: 1.3rem;
-  bottom: 0.5rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--first-color);
-}
-.nav_close:hover{
-  color: var(--first-color-alt);
-}
+
 
 /*            HERO SECTION                */
 .hero-section {
