@@ -100,13 +100,15 @@ document.addEventListener("DOMContentLoaded", function() {
   const navCloseBtn = document.querySelector(".navCloseBtn");
   const navLinks = document.querySelector(".nav-links");
 
-  navOpenBtn.addEventListener("click", function() {
+  navCloseBtn.addEventListener("click", function() {
+    navContainer.classList.remove("nav-open");
+    navLinks.style.left = "-100%";
+});
+
+  navOpenBtn.addEventListener("click", function(event) {
+      event.preventDefault();
       navContainer.classList.add("nav-open");
       navLinks.style.left = "0";
   });
 
-  navCloseBtn.addEventListener("click", function() {
-      navContainer.classList.remove("nav-open");
-      navLinks.style.left = "-100%";
-  });
 });
