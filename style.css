@@ -964,6 +964,13 @@ a {
   font-size: 26px;
 }
 }
+@media screen and (max-width: 1290px){
+  .nav-links ul li a {
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+  }
+}
 @media screen and (max-width: 1177px) {
   .nav-container {
     display: flex;
