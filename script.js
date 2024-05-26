@@ -92,3 +92,21 @@ faqQuestions.forEach(question => {
     toggleIcon.classList.toggle('rotate');
   });
 });
+
+//Hamburger
+document.addEventListener("DOMContentLoaded", function() {
+  const navContainer = document.querySelector(".nav-container");
+  const navOpenBtn = document.querySelector(".navOpenBtn");
+  const navCloseBtn = document.querySelector(".navCloseBtn");
+  const navLinks = document.querySelector(".nav-links");
+
+  navOpenBtn.addEventListener("click", function() {
+      navContainer.classList.add("nav-open");
+      navLinks.style.left = "0";
+  });
+
+  navCloseBtn.addEventListener("click", function() {
+      navContainer.classList.remove("nav-open");
+      navLinks.style.left = "-100%";
+  });
+});
