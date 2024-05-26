@@ -900,10 +900,12 @@ a {
     line-height: 1;
   }
 }
-@media (min-width:768px) and (max-width: 930px){
+@media screen and (max-width:1020px){
   div.row{
     flex-wrap:wrap;
   }
+}
+@media (min-width:768px) and (max-width: 930px){
   .portfolio-card .overlay h3 {
     font-size: 16.5px;
 }
