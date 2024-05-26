@@ -994,11 +994,11 @@ a {
     transition: all 0.4s ease;
     z-index: 100;
   }
-  .nav-links ul li a {
-    color: black;
-    font-weight: 600;
+ .nav-links ul li a {
+  color: black;
+  font-weight: 700;
+  font-size: 15px;
 }
-
   .nav-container .navCloseBtn {
     position: absolute;
     top: 67px;
