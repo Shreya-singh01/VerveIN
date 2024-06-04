@@ -48,8 +48,8 @@ body {
   
   .plan {
     background-color: #f4f4f4;
-    padding: 20px;
-    margin: 10px;
+    padding: 15px;
+    margin: 8px;
     text-align: center;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -131,4 +131,17 @@ select:hover {
   .btn:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
+  }
+
+  @media  screen and (max-width :550px){
+    .pricing-plans {
+      display: flex;
+      margin-bottom: 20px;
+      flex-direction: column;
+  }
+  }
+  @media  screen and (max-width :610px){
+    .plan p {
+      font-size: 15px;
+  }  
   }
