@@ -780,10 +780,11 @@ footer .container{
 }
 .card {
   width: 70%;
+  margin-left: -50px;
 }
   .picture {
-    margin-top: -75px;
-    margin-left: -466px;
+    margin-top: -58px;
+    margin-left: -470px;
 }
   .picture iframe {
     height: 222px;
@@ -887,7 +888,6 @@ a {
 
 
 @media screen and ( max-width: 1290px){
-
 .about-left, .about-right,.hero-left, .hero-right{
   width:100%;
 }
@@ -915,8 +915,14 @@ a {
 }
 @media screen and (max-width: 700px) {
   .picture iframe {
-   visibility: hidden;
+    height: 222px;
+    width: 430px;
 }
+  .picture {
+      margin-top: -7%;
+      margin-left: -65.5%;
+  }
+
 .home {
   height: 80vh;}
 }
@@ -935,7 +941,7 @@ a {
   font-size: 5px;
 }
 .portfolio-card .overlay p {
-  font-size: 3.5px;
+  font-size: 4px;
 }
 }
 
@@ -1001,7 +1007,7 @@ a {
     transition: all 0.4s ease;
     z-index: 100;
   }
- .nav-links ul li a {
+.nav-links ul li a {
   color: black;
   font-weight: 700;
   font-size: 15px;
@@ -1057,4 +1063,10 @@ a {
 .hero-section {
   padding: 25px 0px;
 }
+}
+@media screen and (min-width: 1178px) {
+  .nav-container .navOpenBtn,
+  .nav-container .navCloseBtn {
+    display: none;
+  }
 }
