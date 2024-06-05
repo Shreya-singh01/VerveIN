@@ -374,55 +374,33 @@ a.trans-btn {
 
 /* Card section */
 
-.home {
-  width: 100vw; 
-  height: 100vh; 
+section.video {
+  padding: 50px 0px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0; 
-  margin-top: 30px;
-
 }
-
-.card {
-  width: 80%; 
-  max-width: 600px;
+.video-card {
+  width: 50%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
-  overflow: hidden; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  align-items: center;
 }
-
-.card img {
+#myVideo {
   width: 100%;
-  height: auto;
+  border-radius: 10px;
+}
+.video-card .card-details {
+  padding: 20px 0px;
+  text-align: center;
+  font-size: 20px;
+  border-top: 1px solid rgb(220, 220, 220);
+  background-color: #ececec;
+}
+div.video {
+  padding: 40px;
+  background-image: url(64820c597bb824d4fde74928_dark-mode-email-templates[1].webp);
+  background-size: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-}
-
-.card-content {
-  padding: 20px;
-  text-align: center;
-}
-
-.card-title {
-  margin-bottom: 10px;
-}
-
-.card-text {
-  color: #1c1c1c;
-}
-.picture {
-  border-radius: 20px;
-  overflow: hidden;
-  margin-top: -70px;
-  margin-left: -569px;
-
-}
-.picture iframe {
-  height: 278px;
-  width: 540px;
 }
 /* flowchart */
 .flow-container {
@@ -774,22 +752,6 @@ footer .container{
   .about-left, .about-right {
     gap: 8px;
   }
-  .card-content {
-    padding: 15px;
-    font-size: 15px;
-}
-.card {
-  width: 70%;
-  margin-left: -50px;
-}
-  .picture {
-    margin-top: -58px;
-    margin-left: -470px;
-}
-  .picture iframe {
-    height: 222px;
-    width: 430px;
-}
 .portfolio {
   padding: 30px 100px;
 }
@@ -914,17 +876,18 @@ a {
 }
 }
 @media screen and (max-width: 700px) {
-  .picture iframe {
-    height: 222px;
-    width: 430px;
-}
-  .picture {
-      margin-top: -7%;
-      margin-left: -65.5%;
-  }
-
 .home {
   height: 80vh;}
+  div.video {
+    padding: 10px;
+  }
+  .video-card .card-details {
+    padding: 10px 0px;
+    font-size: 16px;
+  }
+  .video-card{
+    width: 75%;
+  }
 }
 @media screen and (max-width: 570px) {
   .contact-info h3 {
